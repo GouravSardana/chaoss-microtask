@@ -10,7 +10,7 @@ with urllib.request.urlopen("https://api.github.com/repos/aimacode/aima-python/c
         d[r['login']]= r['contributions'] 
         print(":" ,r['login']," "*(20-len(r['login'])),":", #reads the names and how many contribution
               str(r['contributions']))
-with open('z.csv','w') as f:  #open a csv file (readmode) 
+with open('commits.csv','w') as f:  #open a csv file (readmode) 
     w = csv.writer(f,delimiter=',') 
     fieldnames = ['Name', 'No of commits'] #headers
     writer = csv.DictWriter(f, fieldnames=fieldnames)
